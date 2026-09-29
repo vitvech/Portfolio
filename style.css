@@ -447,95 +447,85 @@ main {
     position: relative;
 }
 
-.mascot-placeholder {
-    width: 280px;
-    height: 380px;
+.mascot-stage {
+    width: 320px;
+    height: 480px;
 
     position: relative;
 
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
-
-    border: 1px solid var(--gray-dark);
-
-    background:
-        radial-gradient(
-            circle at 50% 40%,
-            rgba(225, 6, 0, 0.08),
-            transparent 42%
-        ),
-        #080808;
-
-    overflow: hidden;
 }
 
-.mascot-placeholder::before {
+/* Elemento gráfico sutil atrás do personagem */
+.mascot-stage::before {
     content: "";
 
     position: absolute;
-    inset: 20px;
+    width: 280px;
+    height: 280px;
 
-    border: 1px solid #181818;
-}
-
-.mascot-placeholder::after {
-    content: "";
-
-    position: absolute;
-
-    width: 150px;
-    height: 230px;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -48%);
-
-    border-radius: 48% 48% 35% 35%;
-
-    background: #000;
-
-    box-shadow:
-        0 0 45px rgba(225, 6, 0, 0.05);
-}
-
-.mascot-eyes {
-    position: absolute;
-    z-index: 2;
-
-    top: 46%;
+    top: 70px;
     left: 50%;
 
     transform: translateX(-50%);
 
-    display: flex;
-    gap: 25px;
-}
+    border: 1px solid rgba(255, 255, 255, 0.08);
 
-.mascot-eyes span {
-    width: 13px;
-    height: 5px;
-
-    background: var(--red);
-
-    transform: skewX(-25deg);
+    border-radius: 50%;
 
     box-shadow:
-        0 0 8px rgba(225, 6, 0, 0.75);
+        0 0 80px rgba(225, 6, 0, 0.06);
 }
 
-.mascot-label {
+/* Linha vertical de referência */
+.mascot-stage::after {
+    content: "";
+
     position: absolute;
-    z-index: 3;
 
-    bottom: 20px;
+    width: 1px;
+    height: 380px;
 
-    color: var(--gray);
+    left: 50%;
+    bottom: 0;
 
-    font-family: monospace;
-    font-size: 0.58rem;
-    letter-spacing: 0.14em;
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        rgba(255, 255, 255, 0.12),
+        transparent
+    );
+}
+
+.mascot-image {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 20px 30px rgba(0, 0, 0, 0.55))
+        drop-shadow(0 0 25px rgba(225, 6, 0, 0.08));
+
+    transition:
+        transform 0.4s ease,
+        filter 0.4s ease;
+}
+
+.mascot-image:hover {
+    transform: translateY(-5px);
+
+    filter:
+        drop-shadow(0 25px 35px rgba(0, 0, 0, 0.6))
+        drop-shadow(0 0 35px rgba(225, 6, 0, 0.12));
 }
 
 
