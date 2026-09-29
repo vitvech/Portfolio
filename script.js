@@ -1,75 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-    /* =========================================================
-       MENU MOBILE
-    ========================================================= */
-
+    const header = document.getElementById("site-header");
     const menuButton = document.getElementById("mobile-menu-button");
     const navigation = document.getElementById("main-navigation");
+    const languageButton = document.getElementById("language-button");
+    const navLinks = document.querySelectorAll(".main-navigation a");
+    const sections = document.querySelectorAll("main section");
+    const footerYear = document.getElementById("current-year");
 
-    if (menuButton && navigation) {
-        menuButton.addEventListener("click", () => {
-            navigation.classList.toggle("is-open");
-            menuButton.classList.toggle("is-active");
-
-            const isOpen = navigation.classList.contains("is-open");
-
-            menuButton.setAttribute("aria-expanded", isOpen);
-        });
-
-        // Fecha o menu ao clicar em um link
-        const navigationLinks = navigation.querySelectorAll("a");
-
-        navigationLinks.forEach((link) => {
-            link.addEventListener("click", () => {
-                navigation.classList.remove("is-open");
-                menuButton.classList.remove("is-active");
-                menuButton.setAttribute("aria-expanded", "false");
-            });
-        });
-    }
-
-
-    /* =========================================================
-       NAVEGAÇÃO SUAVE
-    ========================================================= */
-
-    const pageLinks = document.querySelectorAll('a[href^="#"]');
-
-    pageLinks.forEach((link) => {
-        link.addEventListener("click", (event) => {
-            const targetId = link.getAttribute("href");
-
-            if (!targetId || targetId === "#") {
-                return;
-            }
-
-            const targetSection = document.querySelector(targetId);
-
-            if (!targetSection) {
-                return;
-            }
-
-            event.preventDefault();
-
-            targetSection.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        });
-    });
-
-
-    /* =========================================================
-       HEADER AO ROLAR A PÁGINA
-    ========================================================= */
-
-    const header = document.getElementById("site-header");
+    /* =========================================
+       HEADER — SCROLL
+    ========================================= */
 
     function updateHeader() {
-        if (!header) {
-            return;
-        }
-
         if (window.scrollY > 30) {
             header.classList.add("is-scrolled");
         } else {
@@ -77,134 +19,165 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    window.addEventListener("scroll", updateHeader);
     updateHeader();
 
-    window.addEventListener("scroll", updateHeader, {
-        passive: true
+
+    /* =========================================
+       MENU MOBILE
+    ========================================= */
+
+    function closeMobileMenu() {
+        navigation.classList.remove("is-open");
+        menuButton.classList.remove("is-active");
+        menuButton.setAttribute("aria-expanded", "false");
+    }
+
+    if (menuButton && navigation) {
+        menuButton.addEventListener("click", () => {
+            const isOpen = navigation.classList.toggle("is-open");
+
+            menuButton.classList.toggle("is-active", isOpen);
+            menuButton.setAttribute("aria-expanded", isOpen);
+        });
+    }
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            closeMobileMenu();
+        });
     });
 
 
-    /* =========================================================
-       SEÇÕES APARECENDO NO SCROLL
-    ========================================================= */
+    /* =========================================
+       ACTIVE NAVIGATION
+    ========================================= */
+
+    const sectionObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
+
+                const sectionId = entry.target.getAttribute("id");
+
+                navLinks.forEach((link) => {
+                    link.classList.remove("is-active");
+
+                    const target = link.getAttribute("href");
+
+                    if (target === `#${sectionId}`) {
+                        link.classList.add("is-active");
+                    }
+                });
+            });
+        },
+        {
+            rootMargin: "-35% 0px -55% 0px",
+            threshold: 0
+        }
+    );
+
+    sections.forEach((section) => {
+        sectionObserver.observe(section);
+    });
+
+
+    /* =========================================
+       SCROLL REVEAL
+    ========================================= */
 
     const revealElements = document.querySelectorAll(
-        ".about-section, " +
-        ".knowledge-section, " +
-        ".projects-section, " +
-        ".certifications-section, " +
-        ".education-section, " +
-        ".experience-section, " +
-        ".contact-section"
+        ".section-header, " +
+        ".about-grid, " +
+        ".knowledge-group, " +
+        ".project-featured, " +
+        ".other-project, " +
+        ".certification-item, " +
+        ".complementary-courses, " +
+        ".education-layout, " +
+        ".experience-empty, " +
+        ".contact-terminal"
     );
 
-    if ("IntersectionObserver" in window) {
-        const revealObserver = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("is-visible");
-                        observer.unobserve(entry.target);
-                    }
-                });
-            },
-            {
-                threshold: 0.12
-            }
-        );
+    revealElements.forEach((element) => {
+        element.classList.add("reveal");
+    });
 
-        revealElements.forEach((element) => {
-            element.classList.add("reveal");
-            revealObserver.observe(element);
-        });
-    } else {
-        revealElements.forEach((element) => {
-            element.classList.add("is-visible");
-        });
-    }
+    const revealObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (!entry.isIntersecting) return;
 
-
-    /* =========================================================
-       DESTAQUE DA SEÇÃO ATUAL NO MENU
-    ========================================================= */
-
-    const sections = document.querySelectorAll("main section[id]");
-    const navLinks = document.querySelectorAll(
-        '.main-navigation a[href^="#"]'
+                entry.target.classList.add("is-visible");
+                observer.unobserve(entry.target);
+            });
+        },
+        {
+            threshold: 0.12,
+            rootMargin: "0px 0px -40px 0px"
+        }
     );
 
-    if ("IntersectionObserver" in window && sections.length > 0) {
-        const sectionObserver = new IntersectionObserver(
-            (entries) => {
-                entries.forEach((entry) => {
-                    if (!entry.isIntersecting) {
-                        return;
-                    }
-
-                    const currentId = entry.target.getAttribute("id");
-
-                    navLinks.forEach((link) => {
-                        const linkTarget = link.getAttribute("href");
-
-                        if (linkTarget === `#${currentId}`) {
-                            link.classList.add("is-active");
-                        } else {
-                            link.classList.remove("is-active");
-                        }
-                    });
-                });
-            },
-            {
-                rootMargin: "-35% 0px -55% 0px",
-                threshold: 0
-            }
-        );
-
-        sections.forEach((section) => {
-            sectionObserver.observe(section);
-        });
-    }
+    revealElements.forEach((element) => {
+        revealObserver.observe(element);
+    });
 
 
-    /* =========================================================
+    /* =========================================
+       ANIMAÇÃO DE ATRASO NOS ELEMENTOS
+    ========================================= */
+
+    document.querySelectorAll(".knowledge-group").forEach((element, index) => {
+        element.style.transitionDelay = `${index * 80}ms`;
+    });
+
+    document.querySelectorAll(".project-featured").forEach((element, index) => {
+        element.style.transitionDelay = `${index * 80}ms`;
+    });
+
+    document.querySelectorAll(".other-project").forEach((element, index) => {
+        element.style.transitionDelay = `${index * 60}ms`;
+    });
+
+    document.querySelectorAll(".certification-item").forEach((element, index) => {
+        element.style.transitionDelay = `${index * 60}ms`;
+    });
+
+
+    /* =========================================
        BOTÃO DE IDIOMA
-    ========================================================= */
-
-    const languageButton = document.getElementById("language-button");
+    ========================================= */
 
     if (languageButton) {
         languageButton.addEventListener("click", () => {
             /*
-             * PT é o idioma atual.
+             * O sistema PT / EN / ES será implementado
+             * em uma etapa própria.
              *
-             * A estrutura para EN/ES será implementada
-             * posteriormente, sem alterar a identidade visual.
+             * Por enquanto, o botão permanece visual
+             * para não alterar o conteúdo do site.
              */
-
-            console.log("Sistema de idiomas: PT ativo.");
+            languageButton.blur();
         });
     }
 
 
-    /* =========================================================
-       ANO AUTOMÁTICO DO FOOTER
-    ========================================================= */
+    /* =========================================
+       ANO DO RODAPÉ
+    ========================================= */
 
-    const currentYear = document.getElementById("current-year");
-
-    if (currentYear) {
-        currentYear.textContent = new Date().getFullYear();
+    if (footerYear) {
+        footerYear.textContent = new Date().getFullYear();
     }
 
 
-    /* =========================================================
-       ACESSIBILIDADE DO MENU
-    ========================================================= */
+    /* =========================================
+       FECHAR MENU AO REDIMENSIONAR
+    ========================================= */
 
-    if (menuButton) {
-        menuButton.setAttribute("aria-expanded", "false");
-        menuButton.setAttribute("aria-label", "Abrir menu");
-    }
-
-    console.log("VITOR VECHIEZ | Portfolio carregado.");
+    window.addEventListener("resize", () => {
+        if (window.innerWidth > 850) {
+            closeMobileMenu();
+        }
+    });
 });
