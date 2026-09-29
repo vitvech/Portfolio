@@ -1,23 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Vitor Vechiez | Portfólio</title>
+    <title>Vitor Vechiez | Redes, NOC & Infraestrutura</title>
 
     <meta
         name="description"
-        content="Portfólio de Vitor Vechiez — Redes de Computadores, NOC, Infraestrutura e Cibersegurança."
-    >
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-        rel="stylesheet"
+        content="Portfólio de Vitor Vechiez — Técnico em Redes de Computadores, com foco em Redes, NOC, Infraestrutura e Segurança da Informação."
     >
 
     <link rel="stylesheet" href="style.css">
@@ -25,148 +16,128 @@
 
 <body>
 
-    <!-- =========================================
-         HEADER
-    ========================================== -->
+    <!-- =====================================================
+         HEADER / NAVEGAÇÃO
+    ====================================================== -->
 
-    <header>
+    <header class="site-header">
 
-        <nav class="navbar">
+        <a href="#inicio" class="logo">
+            VITOR<span>.</span>
+        </a>
 
-            <a href="#inicio" class="logo">
-                VITOR<span>.</span>
-            </a>
+        <nav class="main-nav" aria-label="Navegação principal">
 
-            <ul class="nav-links">
-
-                <li>
-                    <a href="#sobre">Sobre</a>
-                </li>
-
-                <li>
-                    <a href="#conhecimentos">Conhecimentos</a>
-                </li>
-
-                <li>
-                    <a href="#projetos">Projetos</a>
-                </li>
-
-                <li>
-                    <a href="#certificacoes">Certificações</a>
-                </li>
-
-                <li>
-                    <a href="#formacao">Formação</a>
-                </li>
-
-                <li>
-                    <a href="#cursos">Cursos</a>
-                </li>
-
-                <li>
-                    <a href="#experiencia">Experiência</a>
-                </li>
-
-                <li>
-                    <a href="#contato">Contato</a>
-                </li>
-
-            </ul>
-
-            <div class="nav-actions">
-
-                <button
-                    class="language-toggle"
-                    id="languageToggle"
-                    aria-label="Alterar idioma"
-                >
-                    PT
-                </button>
-
-                <button
-                    class="theme-toggle"
-                    id="themeToggle"
-                    aria-label="Alterar tema"
-                >
-                    ◐
-                </button>
-
-            </div>
+            <a href="#sobre">Sobre</a>
+            <a href="#conhecimentos">Conhecimentos</a>
+            <a href="#projetos">Projetos</a>
+            <a href="#certificacoes">Certificações</a>
+            <a href="#formacao">Formação</a>
+            <a href="#experiencia">Experiência</a>
+            <a href="#contato">Contato</a>
 
         </nav>
+
+        <div class="header-actions">
+
+            <button
+                type="button"
+                class="theme-toggle"
+                aria-label="Alternar tema"
+            >
+                ◐
+            </button>
+
+            <button
+                type="button"
+                class="language-toggle"
+                aria-label="Selecionar idioma"
+            >
+                PT
+                <span>⌄</span>
+            </button>
+
+        </div>
 
     </header>
 
 
     <main>
 
-        <!-- =========================================
-             INÍCIO
-        ========================================== -->
+        <!-- =================================================
+             01 — INÍCIO
+        ================================================== -->
 
-        <section class="hero" id="inicio">
+        <section id="inicio" class="hero section">
 
-            <div class="container">
+            <div class="hero-content">
 
-                <div class="hero-content">
+                <p class="section-index">
+                    PORTFÓLIO / 2026
+                </p>
 
-                    <div class="hero-tag">
-                        PORTFÓLIO / 2026
-                    </div>
+                <h1 class="hero-title">
+                    VITOR
+                    <span>VECHIEZ</span>
+                </h1>
 
-                    <h1>
-                        VITOR<br>
-                        <span>VECHIEZ</span>
-                    </h1>
+                <div class="hero-role">
 
-                    <p class="hero-subtitle">
+                    <p>
                         Técnico em Redes de Computadores
                     </p>
 
-                    <p class="hero-description">
+                    <strong>
                         NOC · SOC · INFRAESTRUTURA
-                    </p>
-
-                    <p class="hero-description">
-                        Estudante de Redes de Computadores com foco em
-                        infraestrutura, monitoramento, redes e segurança da informação.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a
-                            href="https://www.linkedin.com/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-primary"
-                        >
-                            LinkedIn
-                        </a>
-
-                        <a
-                            href="https://github.com/vitvech"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn btn-secondary"
-                        >
-                            GitHub
-                        </a>
-
-                        <a
-                            href="#contato"
-                            class="btn btn-secondary"
-                        >
-                            Contato
-                        </a>
-
-                    </div>
+                    </strong>
 
                 </div>
 
-                <!-- Mascote provisório -->
-                <div class="mascot-container" aria-hidden="true">
+                <p class="hero-description">
+                    Desenvolvendo conhecimentos em redes, infraestrutura,
+                    monitoramento e segurança da informação através de
+                    projetos, laboratórios e aprendizado contínuo.
+                </p>
 
-                    <div class="mascot"></div>
+                <div class="hero-links">
+
+                    <a
+                        href="#"
+                        class="text-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        LinkedIn
+                    </a>
+
+                    <a
+                        href="https://github.com/vitvech"
+                        class="text-link"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub
+                    </a>
+
+                    <a
+                        href="#contato"
+                        class="text-link"
+                    >
+                        Contato
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Mascote será desenvolvido posteriormente -->
+            <div class="mascot-container" aria-hidden="true">
+
+                <div class="mascot-placeholder">
+
+                    <span class="mascot-eye mascot-eye-left"></span>
+                    <span class="mascot-eye mascot-eye-right"></span>
 
                 </div>
 
@@ -175,61 +146,63 @@
         </section>
 
 
-        <!-- =========================================
-             SOBRE MIM
-        ========================================== -->
+        <!-- =================================================
+             02 — SOBRE
+        ================================================== -->
 
-        <section id="sobre">
+        <section id="sobre" class="section about-section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-title">
+                <span class="section-number">
+                    01
+                </span>
 
-                    <span>01 / Sobre</span>
+                <h2>
+                    Sobre
+                </h2>
 
-                    <h2>
-                        Sobre mim
-                    </h2>
+            </div>
+
+
+            <div class="about-grid">
+
+                <!-- Foto será adicionada posteriormente -->
+                <div class="about-photo">
+
+                    <div class="photo-placeholder">
+                        FOTO
+                    </div>
 
                 </div>
 
 
-                <div class="about-grid">
+                <div class="about-content">
 
-                    <div class="about-photo">
+                    <p class="about-lead">
+                        Redes, infraestrutura e tecnologia como caminho
+                        profissional.
+                    </p>
 
-                        <div>
-                            FOTO
-                            <br>
-                            <small>Adicionar em assets/foto.jpg</small>
-                        </div>
+                    <p>
+                        Sou estudante de Técnico em Redes de Computadores
+                        no SENAI São Caetano do Sul, onde venho desenvolvendo
+                        conhecimentos práticos em redes, infraestrutura,
+                        monitoramento e segurança da informação.
+                    </p>
 
-                    </div>
+                    <p>
+                        Durante minha formação, tenho trabalhado em projetos
+                        e laboratórios envolvendo Cisco, Fortinet, Linux,
+                        Windows Server, Active Directory, Zabbix e diferentes
+                        tecnologias de infraestrutura.
+                    </p>
 
-
-                    <div class="about-text">
-
-                        <p>
-                            Sou estudante de Técnico em Redes de Computadores
-                            no SENAI São Caetano do Sul, onde venho desenvolvendo
-                            conhecimentos práticos em redes, infraestrutura,
-                            monitoramento e segurança da informação.
-                        </p>
-
-                        <p>
-                            Durante minha formação, tenho trabalhado em projetos
-                            e laboratórios envolvendo Cisco, Fortinet, Linux,
-                            Windows Server, Active Directory, Zabbix e diferentes
-                            tecnologias de infraestrutura.
-                        </p>
-
-                        <p>
-                            Tenho interesse em iniciar minha carreira na área de
-                            Tecnologia da Informação, especialmente em Redes,
-                            NOC e, futuramente, Cibersegurança.
-                        </p>
-
-                    </div>
+                    <p>
+                        Tenho interesse em iniciar minha carreira na área de
+                        Tecnologia da Informação, especialmente em Redes,
+                        NOC e, futuramente, Cibersegurança.
+                    </p>
 
                 </div>
 
@@ -238,33 +211,43 @@
         </section>
 
 
-        <!-- =========================================
-             CONHECIMENTOS
-        ========================================== -->
+        <!-- =================================================
+             03 — CONHECIMENTOS
+        ================================================== -->
 
-        <section id="conhecimentos">
+        <section id="conhecimentos" class="section knowledge-section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-title">
+                <span class="section-number">
+                    02
+                </span>
 
-                    <span>02 / Conhecimentos</span>
+                <div>
 
                     <h2>
-                        Tecnologias
+                        Conhecimentos
                     </h2>
 
                     <p>
-                        Tecnologias e ferramentas estudadas e utilizadas
-                        durante minha formação e projetos práticos.
+                        Tecnologias e conhecimentos desenvolvidos através
+                        de estudos, laboratórios e projetos práticos.
                     </p>
 
                 </div>
 
+            </div>
 
-                <div class="grid grid-2">
 
-                    <article class="card knowledge-card">
+            <div class="knowledge-list">
+
+                <article class="knowledge-item">
+
+                    <span class="knowledge-number">
+                        01
+                    </span>
+
+                    <div>
 
                         <h3>
                             Redes
@@ -276,10 +259,18 @@
                             Packet Tracer · PNETLab
                         </p>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card knowledge-card">
+                <article class="knowledge-item">
+
+                    <span class="knowledge-number">
+                        02
+                    </span>
+
+                    <div>
 
                         <h3>
                             Infraestrutura
@@ -290,10 +281,18 @@
                             Virtualização · Docker · VMware ESXi
                         </p>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card knowledge-card">
+                <article class="knowledge-item">
+
+                    <span class="knowledge-number">
+                        03
+                    </span>
+
+                    <div>
 
                         <h3>
                             Monitoramento
@@ -301,13 +300,21 @@
 
                         <p>
                             Zabbix · Grafana · Prometheus · Monitoramento
-                            de redes · Disponibilidade · Indicadores
+                            de redes · Disponibilidade
                         </p>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card knowledge-card">
+                <article class="knowledge-item">
+
+                    <span class="knowledge-number">
+                        04
+                    </span>
+
+                    <div>
 
                         <h3>
                             Segurança
@@ -318,10 +325,18 @@
                             Fundamentos de Cibersegurança
                         </p>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card knowledge-card">
+                <article class="knowledge-item">
+
+                    <span class="knowledge-number">
+                        05
+                    </span>
+
+                    <div>
 
                         <h3>
                             Cloud & Automação
@@ -331,207 +346,415 @@
                             AWS · Azure · Terraform · Ansible
                         </p>
 
-                    </article>
+                    </div>
 
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- =========================================
-             PROJETOS
-        ========================================== -->
+        <!-- =================================================
+             04 — PROJETOS
+        ================================================== -->
 
-        <section id="projetos">
+        <section id="projetos" class="section projects-section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-title">
+                <span class="section-number">
+                    03
+                </span>
 
-                    <span>03 / Projetos</span>
+                <div>
 
                     <h2>
                         Projetos & Laboratórios
                     </h2>
 
                     <p>
-                        Projetos acadêmicos e laboratórios práticos
-                        desenvolvidos durante minha formação.
+                        Projetos acadêmicos, laboratórios e experiências
+                        práticas desenvolvidas durante minha formação.
                     </p>
 
                 </div>
 
+            </div>
 
-                <div class="grid grid-2">
+
+            <div class="projects-list">
 
 
-                    <article class="card project-card">
+                <article class="project-item">
 
-                        <span class="project-number">
+                    <div class="project-meta">
+
+                        <span>
                             01
                         </span>
 
+                        <span>
+                            AWS · AZURE · TERRAFORM
+                        </span>
+
+                    </div>
+
+                    <div class="project-main">
+
                         <h3>
-                            SENAI TechStock
+                            TechStock
                         </h3>
 
                         <p>
-                            Arquitetura de aplicação distribuída utilizando
-                            AWS e Azure, com redes privadas, servidores,
-                            banco de dados, VPN e infraestrutura como código.
+                            Projeto acadêmico de infraestrutura multi-cloud
+                            envolvendo AWS, Azure, Terraform, VPC, EC2,
+                            RDS, S3, VPN e monitoramento.
                         </p>
 
-                        <div class="project-tags">
+                    </div>
 
-                            <span>AWS</span>
-                            <span>Azure</span>
-                            <span>Terraform</span>
-                            <span>VPC</span>
-                            <span>EC2</span>
-                            <span>RDS</span>
-                            <span>VPN</span>
+                    <div class="project-actions">
 
-                        </div>
+                        <a href="#" class="project-link">
+                            GitHub
+                        </a>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card project-card">
+                <article class="project-item">
 
-                        <span class="project-number">
+                    <div class="project-meta">
+
+                        <span>
                             02
                         </span>
+
+                        <span>
+                            FORTIGATE · VPN · SD-WAN
+                        </span>
+
+                    </div>
+
+                    <div class="project-main">
 
                         <h3>
                             Laboratório FortiGate
                         </h3>
 
                         <p>
-                            Laboratório de infraestrutura envolvendo
-                            FortiGate, SD-WAN, VPN, roteamento e comunicação
-                            entre matriz e filial.
+                            Laboratório de redes e segurança utilizando
+                            FortiGate, SD-WAN, VPN, roteamento,
+                            Active Directory e comunicação entre matriz
+                            e filial.
                         </p>
 
-                        <div class="project-tags">
+                    </div>
 
-                            <span>FortiGate</span>
-                            <span>SD-WAN</span>
-                            <span>VPN</span>
-                            <span>Routing</span>
-                            <span>AD</span>
+                    <div class="project-actions">
 
-                        </div>
+                        <a href="#" class="project-link">
+                            Projeto
+                        </a>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card project-card">
+                <article class="project-item">
 
-                        <span class="project-number">
+                    <div class="project-meta">
+
+                        <span>
                             03
                         </span>
+
+                        <span>
+                            WINDOWS SERVER · AD · GPO
+                        </span>
+
+                    </div>
+
+                    <div class="project-main">
 
                         <h3>
                             Active Directory
                         </h3>
 
                         <p>
-                            Laboratório de administração de ambiente Windows
-                            Server com domínio, usuários, grupos, OUs,
-                            GPOs e compartilhamento de arquivos.
+                            Laboratório envolvendo domínio Windows,
+                            usuários, grupos, OUs, políticas de grupo,
+                            compartilhamento de arquivos e administração.
                         </p>
 
-                        <div class="project-tags">
+                    </div>
 
-                            <span>Windows Server</span>
-                            <span>Active Directory</span>
-                            <span>GPO</span>
-                            <span>DNS</span>
+                    <div class="project-actions">
 
-                        </div>
+                        <a href="#" class="project-link">
+                            Projeto
+                        </a>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card project-card">
+                <article class="project-item">
 
-                        <span class="project-number">
+                    <div class="project-meta">
+
+                        <span>
                             04
                         </span>
+
+                        <span>
+                            ZABBIX · GRAFANA · MONITORING
+                        </span>
+
+                    </div>
+
+                    <div class="project-main">
 
                         <h3>
                             Monitoramento com Zabbix
                         </h3>
 
                         <p>
-                            Laboratório de monitoramento de infraestrutura
+                            Laboratórios de monitoramento de infraestrutura
                             utilizando Zabbix e ferramentas de visualização
-                            para acompanhamento de disponibilidade.
+                            para acompanhar disponibilidade e desempenho.
                         </p>
 
-                        <div class="project-tags">
+                    </div>
 
-                            <span>Zabbix</span>
-                            <span>Grafana</span>
-                            <span>Monitoring</span>
+                    <div class="project-actions">
 
-                        </div>
+                        <a href="#" class="project-link">
+                            Projeto
+                        </a>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card project-card">
+                <article class="project-item">
 
-                        <span class="project-number">
+                    <div class="project-meta">
+
+                        <span>
                             05
                         </span>
+
+                        <span>
+                            CYBERSECURITY · LINUX · PENTEST
+                        </span>
+
+                    </div>
+
+                    <div class="project-main">
 
                         <h3>
                             Mr. Robot
                         </h3>
 
                         <p>
-                            Laboratório acadêmico de segurança realizado
-                            em grupo, utilizando uma máquina virtual
-                            controlada para exploração e análise.
+                            Laboratório acadêmico de segurança e exploração
+                            de vulnerabilidades em ambiente controlado,
+                            realizado em grupo.
                         </p>
 
-                        <div class="project-tags">
+                    </div>
 
-                            <span>Cybersecurity</span>
-                            <span>Linux</span>
-                            <span>Enumeration</span>
-                            <span>Lab</span>
+                    <div class="project-actions">
 
-                        </div>
+                        <a href="#" class="project-link">
+                            Projeto
+                        </a>
 
-                    </article>
+                    </div>
+
+                </article>
 
 
-                    <article class="card project-card">
+                <article class="project-item">
 
-                        <span class="project-number">
+                    <div class="project-meta">
+
+                        <span>
                             06
                         </span>
+
+                        <span>
+                            PENTEST · LINUX · SECURITY
+                        </span>
+
+                    </div>
+
+                    <div class="project-main">
 
                         <h3>
                             Basic Pentesting
                         </h3>
 
                         <p>
-                            Laboratório acadêmico controlado envolvendo
-                            enumeração, identificação de vulnerabilidades
-                            e análise de uma máquina virtual.
+                            Laboratório prático de segurança realizado em
+                            ambiente controlado, explorando técnicas de
+                            enumeração e identificação de vulnerabilidades.
                         </p>
 
-                        <div class="project-tags">
+                    </div>
 
-                            <span>Pentesting</span>
-                            <span>Enumeration</span>
-                            <span>Linux</span>
-                            <span>Lab</span>
+                    <div class="project-actions">
+
+                        <a href="#" class="project-link">
+                            Projeto
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             05 — CERTIFICAÇÕES
+        ================================================== -->
+
+        <section id="certificacoes" class="section certifications-section">
+
+            <div class="section-heading">
+
+                <span class="section-number">
+                    04
+                </span>
+
+                <div>
+
+                    <h2>
+                        Certificações
+                    </h2>
+
+                    <p>
+                        Certificações e credenciais relevantes para minha
+                        formação profissional.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="certifications-layout">
+
+                <!-- Mascote/certificado será desenvolvido posteriormente -->
+                <div class="certification-visual">
+
+                    <div class="certificate-stage">
+
+                        <div class="certificate-placeholder">
+                            CERTIFICAÇÃO
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="certification-list">
+
+
+                    <article class="certification-item active">
+
+                        <span class="certification-number">
+                            01
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Cisco Networking Academy
+                            </h3>
+
+                            <p>
+                                Formação em fundamentos de redes,
+                                switching, routing, wireless e segurança.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="certification-item">
+
+                        <span class="certification-number">
+                            02
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Fortinet NSE 3
+                            </h3>
+
+                            <p>
+                                Certificação da Fortinet relacionada aos
+                                fundamentos de segurança de rede.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="certification-item">
+
+                        <span class="certification-number">
+                            03
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                AWS Academy Graduate — Cloud Foundations
+                            </h3>
+
+                            <p>
+                                Formação introdutória em fundamentos de
+                                computação em nuvem pela AWS Academy.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article class="certification-item future">
+
+                        <span class="certification-number">
+                            04
+                        </span>
+
+                        <div>
+
+                            <h3>
+                                Novas certificações
+                            </h3>
+
+                            <p>
+                                Espaço reservado para futuras certificações
+                                profissionais.
+                            </p>
 
                         </div>
 
@@ -545,417 +768,511 @@
         </section>
 
 
-        <!-- =========================================
-             CERTIFICAÇÕES
-        ========================================== -->
+        <!-- =================================================
+             06 — FORMAÇÃO E CURSOS
+        ================================================== -->
 
-        <section id="certificacoes">
+        <section id="formacao" class="section education-section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-title">
+                <span class="section-number">
+                    05
+                </span>
 
-                    <span>04 / Certificações</span>
+                <div>
 
                     <h2>
-                        Certificações
+                        Formação e Cursos
                     </h2>
 
                     <p>
-                        Credenciais e certificações relevantes para minha
-                        formação profissional.
+                        Formação acadêmica e cursos complementares que
+                        fazem parte da minha trajetória.
                     </p>
 
                 </div>
 
+            </div>
 
-                <div class="certification-box">
 
-                    <div class="certification-content">
+            <div class="education-layout">
 
-                        <h3>
-                            Credenciais
-                        </h3>
 
-                        <p>
-                            Esta área será utilizada futuramente para
-                            apresentar os certificados de forma interativa.
+                <!-- =========================================
+                     LISTA
+                ========================================== -->
+
+                <div class="education-list">
+
+
+                    <div class="education-group">
+
+                        <div class="education-group-title">
+
+                            <span>
+                                EM ANDAMENTO
+                            </span>
+
+                            <span>
+                                02
+                            </span>
+
+                        </div>
+
+
+                        <article class="education-row principal">
+
+                            <div class="education-row-main">
+
+                                <h3>
+                                    Técnico em Redes de Computadores
+                                </h3>
+
+                                <p>
+                                    SENAI São Caetano do Sul
+                                </p>
+
+                            </div>
+
+                            <span class="education-status">
+                                Principal
+                            </span>
+
+                        </article>
+
+
+                        <article class="education-row">
+
+                            <div class="education-row-main">
+
+                                <h3>
+                                    Tecnologias Aeroespaciais
+                                </h3>
+
+                                <p>
+                                    UFABC
+                                </p>
+
+                            </div>
+
+                            <span class="education-status">
+                                Em andamento
+                            </span>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="education-group">
+
+                        <div class="education-group-title">
+
+                            <span>
+                                CONCLUÍDOS
+                            </span>
+
+                            <span>
+                                03
+                            </span>
+
+                        </div>
+
+
+                        <article class="education-row">
+
+                            <div class="education-row-main">
+
+                                <h3>
+                                    Cibersegurança do Zero à Prática
+                                </h3>
+
+                                <p>
+                                    Santander
+                                </p>
+
+                            </div>
+
+                            <span class="education-status">
+                                Concluído
+                            </span>
+
+                        </article>
+
+
+                        <article class="education-row">
+
+                            <div class="education-row-main">
+
+                                <h3>
+                                    Implantação de Redes Wireless
+                                </h3>
+
+                                <p>
+                                    Formação complementar
+                                </p>
+
+                            </div>
+
+                            <span class="education-status">
+                                Concluído
+                            </span>
+
+                        </article>
+
+
+                        <article class="education-row">
+
+                            <div class="education-row-main">
+
+                                <h3>
+                                    Cisco Networking Academy
+                                </h3>
+
+                                <p>
+                                    Redes, segurança e infraestrutura
+                                </p>
+
+                            </div>
+
+                            <span class="education-status">
+                                Concluído
+                            </span>
+
+                        </article>
+
+                    </div>
+
+
+                    <div class="education-group future-group">
+
+                        <div class="education-group-title">
+
+                            <span>
+                                NOVOS CURSOS
+                            </span>
+
+                            <span>
+                                +
+                            </span>
+
+                        </div>
+
+                        <p class="education-future-text">
+                            Novos cursos e certificações serão adicionados
+                            conforme minha formação avançar.
                         </p>
 
+                    </div>
 
-                        <div class="certification-list">
-
-
-                            <div class="certification-item">
-
-                                <span>
-                                    Cisco Networking Academy
-                                </span>
-
-                            </div>
+                </div>
 
 
-                            <div class="certification-item">
+                <!-- =========================================
+                     RESUMO DA FORMAÇÃO PRINCIPAL
+                ========================================== -->
 
-                                <span>
-                                    Fortinet NSE 3
-                                </span>
+                <aside class="education-profile">
 
-                            </div>
+                    <span class="education-profile-label">
+                        FORMAÇÃO PRINCIPAL
+                    </span>
+
+                    <div class="education-profile-content">
+
+                        <span class="education-profile-number">
+                            01
+                        </span>
+
+                        <h3>
+                            Técnico em Redes
+                            de Computadores
+                        </h3>
+
+                        <p class="education-institution">
+                            SENAI São Caetano do Sul
+                        </p>
+
+                        <p class="education-area">
+                            Cyber e IA
+                        </p>
+
+                    </div>
 
 
-                            <div class="certification-item">
+                    <div class="education-details">
 
-                                <span>
-                                    AWS Academy Graduate — Cloud Foundations
-                                </span>
+                        <div class="education-detail">
 
-                            </div>
+                            <span>
+                                STATUS
+                            </span>
+
+                            <strong>
+                                Em andamento
+                            </strong>
+
+                        </div>
 
 
-                            <div class="certification-item">
+                        <div class="education-detail">
 
-                                <span>
-                                    Novas certificações
-                                </span>
+                            <span>
+                                PREVISÃO
+                            </span>
 
-                            </div>
+                            <strong>
+                                2026 / 2027
+                            </strong>
 
+                        </div>
+
+
+                        <div class="education-detail">
+
+                            <span>
+                                ÁREA
+                            </span>
+
+                            <strong>
+                                Redes · Infraestrutura
+                            </strong>
 
                         </div>
 
                     </div>
 
-                </div>
+
+                    <div class="education-progress">
+
+                        <div class="education-progress-header">
+
+                            <span>
+                                FORMAÇÃO
+                            </span>
+
+                            <span>
+                                EM ANDAMENTO
+                            </span>
+
+                        </div>
+
+                        <div class="progress-line">
+
+                            <span></span>
+
+                        </div>
+
+                    </div>
+
+                </aside>
 
             </div>
 
         </section>
 
 
-        <!-- =========================================
-             FORMAÇÃO
-        ========================================== -->
+        <!-- =================================================
+             07 — EXPERIÊNCIA
+        ================================================== -->
 
-        <section id="formacao">
+        <section id="experiencia" class="section experience-section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-title">
+                <span class="section-number">
+                    06
+                </span>
 
-                    <span>05 / Formação</span>
+                <div>
 
                     <h2>
-                        Formação
+                        Experiência
                     </h2>
 
                     <p>
-                        Formação acadêmica e técnica em andamento.
+                        Minha trajetória profissional em construção.
                     </p>
 
                 </div>
 
+            </div>
 
-                <div class="grid grid-2">
 
+            <div class="timeline">
 
-                    <!-- EM ANDAMENTO -->
+                <article class="timeline-item">
 
-                    <div class="formation-column">
+                    <div class="timeline-date">
+                        2026
+                    </div>
+
+                    <div class="timeline-marker"></div>
+
+                    <div class="timeline-content">
+
+                        <span class="timeline-status">
+                            EM CONSTRUÇÃO
+                        </span>
 
                         <h3>
-                            Em andamento
+                            Primeira oportunidade em Tecnologia da Informação
                         </h3>
 
-
-                        <article class="card formation-card">
-
-                            <small>
-                                Principal
-                            </small>
-
-                            <h4>
-                                Técnico em Redes de Computadores
-                            </h4>
-
-                            <p>
-                                SENAI São Caetano do Sul — Cyber e IA
-                            </p>
-
-                            <p>
-                                Conclusão prevista: 2026/2027
-                            </p>
-
-                        </article>
-
-
-                        <article class="card formation-card">
-
-                            <small>
-                                Formação complementar
-                            </small>
-
-                            <h4>
-                                Tecnologias Aeroespaciais
-                            </h4>
-
-                            <p>
-                                UFABC
-                            </p>
-
-                            <p>
-                                Em andamento
-                            </p>
-
-                        </article>
+                        <p>
+                            Buscando iniciar minha trajetória profissional
+                            em Redes, NOC, Infraestrutura e, futuramente,
+                            Cibersegurança.
+                        </p>
 
                     </div>
 
-
-                    <!-- CONCLUÍDOS -->
-
-                    <div class="formation-column">
-
-                        <h3>
-                            Concluídos
-                        </h3>
-
-
-                        <article class="card formation-card">
-
-                            <small>
-                                Formação
-                            </small>
-
-                            <h4>
-                                Novas formações
-                            </h4>
-
-                            <p>
-                                Esta área será atualizada conforme novas
-                                formações forem concluídas.
-                            </p>
-
-                        </article>
-
-                    </div>
-
-                </div>
+                </article>
 
             </div>
 
         </section>
 
 
-        <!-- =========================================
-             CURSOS
-        ========================================== -->
+        <!-- =================================================
+             08 — CONTATO
+        ================================================== -->
 
-        <section id="cursos">
+        <section id="contato" class="section contact-section">
 
-            <div class="container">
+            <div class="section-heading">
 
-                <div class="section-title">
+                <span class="section-number">
+                    07
+                </span>
 
-                    <span>06 / Cursos</span>
+                <div>
 
                     <h2>
-                        Cursos complementares
+                        Contato
                     </h2>
 
                     <p>
-                        Cursos e treinamentos realizados ao longo da formação.
-                    </p>
-
-                </div>
-
-
-                <div class="course-list">
-
-
-                    <div class="course-item">
-
-                        <span>
-                            Cibersegurança do Zero à Prática
-                        </span>
-
-                        <span>
-                            Santander
-                        </span>
-
-                    </div>
-
-
-                    <div class="course-item">
-
-                        <span>
-                            Implantação de Redes Wireless
-                        </span>
-
-                        <span>
-                            SENAI
-                        </span>
-
-                    </div>
-
-
-                    <div class="course-item">
-
-                        <span>
-                            Cisco Networking Academy
-                        </span>
-
-                        <span>
-                            Cisco
-                        </span>
-
-                    </div>
-
-
-                    <div class="course-item">
-
-                        <span>
-                            Novos cursos
-                        </span>
-
-                        <span>
-                            Em atualização
-                        </span>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =========================================
-             EXPERIÊNCIA
-        ========================================== -->
-
-        <section id="experiencia">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>07 / Experiência</span>
-
-                    <h2>
-                        Experiência profissional
-                    </h2>
-
-                </div>
-
-
-                <div class="experience-box">
-
-                    <h3>
-                        Em construção
-                    </h3>
-
-                    <p>
-                        Buscando minha primeira oportunidade profissional
-                        na área de Tecnologia da Informação, com interesse
-                        inicial em Redes, NOC e Infraestrutura.
+                        Canais disponíveis para oportunidades e conexões
+                        profissionais.
                     </p>
 
                 </div>
 
             </div>
 
-        </section>
 
+            <div class="contact-interface">
 
-        <!-- =========================================
-             CONTATO
-        ========================================== -->
+                <div class="terminal-top">
 
-        <section id="contato">
+                    <div class="terminal-dots">
 
-            <div class="container">
+                        <span></span>
+                        <span></span>
+                        <span></span>
 
-                <div class="section-title">
+                    </div>
 
-                    <span>08 / Contato</span>
-
-                    <h2>
-                        Vamos conversar?
-                    </h2>
-
-                    <p>
-                        Estou aberto a oportunidades de entrada na área
-                        de Tecnologia da Informação.
-                    </p>
+                    <span>
+                        contact_interface
+                    </span>
 
                 </div>
 
 
-                <div class="contact-grid">
+                <div class="terminal-body">
+
+                    <p class="terminal-line">
+                        <span>&gt;</span>
+                        system.boot()
+                    </p>
+
+                    <p class="terminal-line">
+                        <span>&gt;</span>
+                        checking_available_channels...
+                    </p>
+
+                    <p class="terminal-line success">
+                        <span>&gt;</span>
+                        connection_ready
+                    </p>
 
 
-                    <div class="card contact-card">
+                    <div class="contact-links">
 
-                        <small>
-                            LinkedIn
-                        </small>
 
                         <a
-                            href="https://www.linkedin.com/"
+                            href="#"
+                            class="contact-link"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            LinkedIn
+
+                            <span class="contact-label">
+                                LINKEDIN
+                            </span>
+
+                            <span class="contact-value">
+                                perfil profissional
+                            </span>
+
+                            <span class="contact-arrow">
+                                ↗
+                            </span>
+
                         </a>
 
-                    </div>
-
-
-                    <div class="card contact-card">
-
-                        <small>
-                            GitHub
-                        </small>
 
                         <a
                             href="https://github.com/vitvech"
+                            class="contact-link"
                             target="_blank"
                             rel="noopener noreferrer"
                         >
-                            github.com/vitvech
+
+                            <span class="contact-label">
+                                GITHUB
+                            </span>
+
+                            <span class="contact-value">
+                                github.com/vitvech
+                            </span>
+
+                            <span class="contact-arrow">
+                                ↗
+                            </span>
+
                         </a>
 
+
+                        <a
+                            href="mailto:"
+                            class="contact-link"
+                        >
+
+                            <span class="contact-label">
+                                E-MAIL
+                            </span>
+
+                            <span class="contact-value">
+                                disponível para contato
+                            </span>
+
+                            <span class="contact-arrow">
+                                ↗
+                            </span>
+
+                        </a>
+
+
                     </div>
 
 
-                    <div class="card contact-card">
-
-                        <small>
-                            E-mail
-                        </small>
-
-                        <p>
-                            Adicionar e-mail
-                        </p>
-
-                    </div>
-
-
-                    <div class="card contact-card">
-
-                        <small>
-                            Localização
-                        </small>
-
-                        <p>
-                            São Paulo — Brasil
-                        </p>
-
-                    </div>
-
+                    <p class="terminal-cursor">
+                        &gt; awaiting_connection<span>_</span>
+                    </p>
 
                 </div>
 
@@ -966,29 +1283,36 @@
     </main>
 
 
-    <!-- =========================================
+    <!-- =====================================================
          FOOTER
-    ========================================== -->
+    ====================================================== -->
 
-    <footer>
+    <footer class="site-footer">
 
-        <div class="container footer-content">
+        <div>
+
+            <strong>
+                VITOR VECHIEZ
+            </strong>
 
             <span>
-                © 2026 Vitor Vechiez
-            </span>
-
-            <span>
-                Redes · NOC · Infraestrutura · Cybersecurity
+                Redes · NOC · Infraestrutura · Segurança
             </span>
 
         </div>
 
+        <span>
+            © 2026
+        </span>
+
     </footer>
 
+
+    <!-- =====================================================
+         SCRIPT
+    ====================================================== -->
 
     <script src="script.js"></script>
 
 </body>
-
 </html>
